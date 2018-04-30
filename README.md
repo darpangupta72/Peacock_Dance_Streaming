@@ -8,7 +8,9 @@ And then for training the model and running the files you need to have the packa
 Use the following command to do the same
 
 sudo apt-get install python3
+
 sudo apt-get install pip
+
 sudo pip install -r requirements.txt
 
 Now, you have all the pre-requisite files installed. Now train the model using the images from the training dataset using the command given in the "tf_train" file given in the PC train folder(Change the pwd with the location of training dataset)
@@ -22,7 +24,8 @@ These are the requirements for training and testing your model. This can be done
 Now, run
 
 sudo apt-get update
-sudo apt-get -y upgrade
+
+sudo apt-get upgrade
 
 Now install ffmpeg(Normally it would already be installed, if you are using raspian on a raspberrypi3). In any case, use the following command:
 
