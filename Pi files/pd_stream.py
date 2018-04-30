@@ -12,6 +12,10 @@ stream = 15; stream_buffer = 10; sleep_nondance = 0; sleep_nopeacock = 0
 # no. of the video device as seen in "ls -ltrh /dev/video*""
 num_device = 1; 
 
+#pwd stores the path to your complete folder on pi we have stored on desktop
+# img_dir = "/home/pi/Desktop"
+pwd = "/home/pi/Desktop"
+# pwd = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel"
 # predict system state using probabilities for each class
 def gen_label(predictions):
 
@@ -26,8 +30,7 @@ def gen_label(predictions):
 # predict system state for given image (.jpg)
 def predict(img):
 
-	img_dir = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel"
-	# img_dir = "/home/pi/Desktop"
+	img_dir = pwd
 	img_path = path.join(img_dir, "frame_latest.jpg")
 
 	# Read in the image_data
