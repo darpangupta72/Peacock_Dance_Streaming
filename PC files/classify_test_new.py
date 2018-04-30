@@ -1,3 +1,5 @@
+## This file is used to test the performance of the model prepared over the test dataset update the pwd variable.
+
 import tensorflow as tf
 import numpy as np
 import sys, os
@@ -7,7 +9,8 @@ from sklearn.externals import joblib
 
 # 2 - dance, 1 - nondance, 0 - others
 conf_matrix = np.zeros([3, 3])
-
+pwd = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel"
+## location of peacock_test dataset
 def update_conf(predictions, i):
 
     ans = -1
@@ -36,7 +39,7 @@ with tf.gfile.FastGFile("output_graph.pb", 'rb') as f:
 sess = tf.Session()
 
 cnt = 0
-dancedir = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel/peacock_test/dance"
+dancedir = pwd +"/peacock_test/dance"
 for file in os.listdir(dancedir):
 
     # change this as you see fit
@@ -55,7 +58,7 @@ for file in os.listdir(dancedir):
     print(cnt)
 
 cnt = 0        
-nondancedir = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel/peacock_test/nondance"
+nondancedir = pwd + "/peacock_test/nondance"
 for file in os.listdir(nondancedir):
 
     # change this as you see fit
@@ -76,7 +79,7 @@ for file in os.listdir(nondancedir):
     print(cnt)
 
 cnt = 0
-othersdir = "/media/darpan/MIsc./Python Workspace/Peacock_Dance_Streaming/COP-FinalModel/peacock_test/nopeacock"
+othersdir = pwd + "/peacock_test/nopeacock"
 for file in os.listdir(othersdir):
 
     # change this as you see fit

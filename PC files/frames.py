@@ -1,3 +1,4 @@
+#extract frames from a video
 # required module cv2
 import cv2
 # replace 'peacock.mp4' by the video name for which frames are to be extracted
