@@ -102,7 +102,7 @@ if __name__ == "__main__":
 				print("state 0 - nopeacock, sleeping for " + str(sleep_nopeacock))
 				sleep(sleep_nopeacock)	
 		
-		the device sleeps from 7 pm to 6 am
+		# the device sleeps from 7 pm to 6 am
 		now = datetime.now()
 		if (now.hour >= 19 or now.hour < 6):
 			print("night")
